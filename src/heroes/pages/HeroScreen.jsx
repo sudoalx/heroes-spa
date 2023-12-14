@@ -20,10 +20,10 @@ export const HeroScreen = () => {
         <img
           src={`/assets/heroes/${id}.jpg`}
           alt={hero.superhero}
-          className="w-1/2 rounded-md shadow-md aspect-w-16 aspect-h-9 object-cover max-w-sm"
+          className="w-1/2 rounded-md shadow-md aspect-w-16 aspect-h-9 object-cover max-w-sm animate__animated animate__fadeInLeft"
         />
-        <div>
-          <h1 className="text-2xl font-bold">{`HeroScreen ${hero.superhero}`}</h1>
+        <div className="flex flex-col gap-4 animate__animated animate__fadeIn">
+          <h1 className="text-2xl font-bold">{`Hero: ${hero.superhero}`}</h1>
           <ul>
             <li className="list-none">{`Alter ego: ${hero.alter_ego}`}</li>
             <li className="list-none">{`Publisher: ${hero.publisher}`}</li>
