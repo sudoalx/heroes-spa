@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const CharactersByHero = ({ alter_ego, characters }) => {
@@ -23,7 +22,11 @@ export const HeroCard = ({
   return (
     <div className="card max-w-full max-h-full bg-base-100 shadow-xl image-full">
       <figure>
-        <img src={heroImage} alt={superhero} className="w-full h-full" />
+        <img
+          src={heroImage}
+          alt={superhero}
+          className="w-full h-full animate__animated animate__fadeIn"
+        />
       </figure>
       <div className="card-body justify-between">
         <div>
@@ -39,7 +42,7 @@ export const HeroCard = ({
           </p>
 
           <div className="card-actions justify-end">
-            <Link to={`/hero/${id}`} className="btn btn-primary">
+            <Link to={`/hero/${id}`} className="btn btn-primary text-white">
               More info
             </Link>
           </div>
