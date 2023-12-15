@@ -14,7 +14,7 @@ export const AppRouter = () => {
             <Login />
           </PublicRoute>
         }
-      ></Route>
+      />
       <Route
         path="/*"
         element={
@@ -22,7 +22,7 @@ export const AppRouter = () => {
             <HeroesRoutes />
           </PrivateRoute>
         }
-      ></Route>
+      />
     </Routes>
   );
 };
