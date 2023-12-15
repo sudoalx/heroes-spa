@@ -1,13 +1,18 @@
 import { IoIosLogOut, IoIosSettings } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 export const Navbar = () => {
   const navigate = useNavigate();
 
   const onLogut = () => {
+    logout();
     navigate("/login", { replace: true });
   };
+
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <div className="navbar bg-base-100">
@@ -113,7 +118,7 @@ export const Navbar = () => {
             <li>
               <a>
                 <FaUser className="inline-block" />
-                Profile
+                {user?.name}
               </a>
             </li>
             <li>
