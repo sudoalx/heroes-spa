@@ -1,11 +1,17 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 export const Login = () => {
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
+
   const onLogin = (e) => {
     e.preventDefault();
-    navigate("/marvel", { replace: true });
+    login("Alex");
+    navigate("/", { replace: true });
   };
+
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-6 shadow rounded bg-base-100">
