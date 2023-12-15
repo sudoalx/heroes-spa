@@ -5,7 +5,7 @@ import { Dc, Marvel } from "../pages";
 import { SearchScreen } from "../pages/SearchScreen";
 import { HeroScreen } from "../pages/HeroScreen";
 
-export const HeroesRoute = () => {
+export const HeroesRoutes = () => {
   return (
     <>
       <Navbar />
