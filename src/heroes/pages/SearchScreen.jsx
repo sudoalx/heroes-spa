@@ -28,7 +28,7 @@ export const SearchScreen = () => {
 
   return (
     <div className="p-4">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center mb-8">
         <h1 className="text-4xl font-bold mb-4">Search</h1>
         <form onSubmit={onSearchSubmit}>
           <input
@@ -42,7 +42,7 @@ export const SearchScreen = () => {
           />
         </form>
       </div>
-      <h2 className="text-2xl font-bold mt-4 mb-4">Results</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Results</h2>
       {(heroes.length === 0 &&
         (q.length === 0 ? (
           <p className="align-middle text-center">
