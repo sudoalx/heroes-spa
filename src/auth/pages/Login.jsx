@@ -8,8 +8,11 @@ export const Login = () => {
 
   const onLogin = (e) => {
     e.preventDefault();
+
+    const lastPath = localStorage.getItem("lastPath") || "/";
+
     login("Alex");
-    navigate("/", { replace: true });
+    navigate(lastPath, { replace: true });
   };
 
   return (
