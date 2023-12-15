@@ -20,4 +20,4 @@ To use this proyect just type and execute
 yarn start
 ```
 
-## TODO: Add protected routes, tests and production build
+## TODO: Fix design since Tailwind classes were not working as expected in local environment
