@@ -1,6 +1,5 @@
-import { useReducer } from "react"
-import { authReducer } from "../src/auth/context/authReducer"
-import { types } from "../src/auth/types/types"
+import { authReducer } from "../../../src/auth/context/authReducer"
+import { types } from "../../../src/auth/types/types"
 
 describe('test authReducer', () => {
     test('should first return default state', () => {
