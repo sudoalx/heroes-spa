@@ -45,7 +45,6 @@ describe("Tests on public route", () => {
         </MemoryRouter>
       </AuthContext.Provider>
     );
-    screen.debug();
     expect(screen.queryByText("Marvel Page")).toBeTruthy();
   });
 });
