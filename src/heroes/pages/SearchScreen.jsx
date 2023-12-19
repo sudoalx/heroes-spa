@@ -50,7 +50,7 @@ export const SearchScreen = () => {
             Start searching by typing the name of the hero in the search box.
           </p>
         ) : (
-          <p className="align-middle text-center wrap">
+          <p className="align-middle text-center wrap" aria-label="not-found">
             There are no heroes with the name "<strong>{q}</strong>" in the DB.
           </p>
         ))) ||
