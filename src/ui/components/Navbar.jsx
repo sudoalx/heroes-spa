@@ -7,7 +7,7 @@ import { AuthContext } from "../../auth/context/AuthContext";
 export const Navbar = () => {
   const navigate = useNavigate();
 
-  const onLogut = () => {
+  const onLogout = () => {
     logout();
     navigate("/login", { replace: true });
   };
@@ -128,7 +128,7 @@ export const Navbar = () => {
               </a>
             </li>
             <li>
-              <button onClick={onLogut}>
+              <button onClick={onLogout} aria-label="logout">
                 <IoIosLogOut className="inline-block" />
                 Logout
               </button>
