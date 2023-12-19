@@ -12,7 +12,7 @@ export const SearchScreen = () => {
 
   const query = queryString.parse(location.search);
 
-  const { q = "" } = query;
+  const { q = localStorage.getItem("lastSearch") || "" } = query;
 
   const heroes = getHeroesByName(q);
 
@@ -24,6 +24,7 @@ export const SearchScreen = () => {
     e.preventDefault();
     if (searchText.trim().length > 50) return;
     navigate(`?q=${searchText}`);
+    localStorage.setItem("lastSearch", searchText);
   };
 
   return (
